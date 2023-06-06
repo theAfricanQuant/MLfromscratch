@@ -34,8 +34,7 @@ class Perceptron:
 
     def predict(self, X):
         linear_output = np.dot(X, self.weights) + self.bias
-        y_predicted = self.activation_func(linear_output)
-        return y_predicted
+        return self.activation_func(linear_output)
 
     def _unit_step_func(self, x):
         return np.where(x>=0, 1, 0)

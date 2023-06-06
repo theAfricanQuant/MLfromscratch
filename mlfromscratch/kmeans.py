@@ -69,8 +69,7 @@ class KMeans():
     def _closest_centroid(self, sample, centroids):
         # distance of the current sample to each centroid
         distances = [euclidean_distance(sample, point) for point in centroids]
-        closest_index = np.argmin(distances)
-        return closest_index
+        return np.argmin(distances)
 
     def _get_centroids(self, clusters):
         # assign mean value of clusters to centroids
@@ -88,7 +87,7 @@ class KMeans():
     def plot(self):
         fig, ax = plt.subplots(figsize=(12, 8))
 
-        for i, index in enumerate(self.clusters):
+        for index in self.clusters:
             point = self.X[index].T
             ax.scatter(*point)
 

@@ -8,8 +8,7 @@ cmap = ListedColormap(['#FF0000', '#00FF00', '#0000FF'])
 from knn import KNN
 
 def accuracy(y_true, y_pred):
-    accuracy = np.sum(y_true == y_pred) / len(y_true)
-    return accuracy
+    return np.sum(y_true == y_pred) / len(y_true)
 
 
 iris = datasets.load_iris()

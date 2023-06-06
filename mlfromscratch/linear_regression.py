@@ -28,6 +28,5 @@ class LinearRegression:
  
 
     def predict(self, X):
-        y_approximated = np.dot(X, self.weights) + self.bias
-        return y_approximated
+        return np.dot(X, self.weights) + self.bias
 

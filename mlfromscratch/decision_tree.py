@@ -90,9 +90,7 @@ class DecisionTree:
         e_l, e_r = entropy(y[left_idxs]), entropy(y[right_idxs])
         child_entropy = (n_l / n) * e_l + (n_r / n) * e_r
 
-        # information gain is difference in loss before vs. after split
-        ig = parent_entropy - child_entropy
-        return ig
+        return parent_entropy - child_entropy
 
     def _split(self, X_column, split_thresh):
         left_idxs = np.argwhere(X_column <= split_thresh).flatten()
