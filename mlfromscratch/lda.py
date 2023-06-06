@@ -41,7 +41,7 @@ class LDA:
         eigenvalues = eigenvalues[idxs]
         eigenvectors = eigenvectors[idxs]
         # store first n eigenvectors
-        self.linear_discriminants = eigenvectors[0:self.n_components]
+        self.linear_discriminants = eigenvectors[:self.n_components]
 
     def transform(self, X):
         # project data

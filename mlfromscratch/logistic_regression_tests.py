@@ -7,8 +7,7 @@ from logistic_regression import LogisticRegression
 #from regression import LogisticRegression
 
 def accuracy(y_true, y_pred):
-    accuracy = np.sum(y_true == y_pred) / len(y_true)
-    return accuracy
+    return np.sum(y_true == y_pred) / len(y_true)
 
 bc = datasets.load_breast_cancer()
 X, y = bc.data, bc.target

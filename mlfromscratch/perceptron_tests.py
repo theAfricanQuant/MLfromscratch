@@ -7,8 +7,7 @@ from perceptron import Perceptron
 
 
 def accuracy(y_true, y_pred):
-    accuracy = np.sum(y_true == y_pred) / len(y_true)
-    return accuracy
+    return np.sum(y_true == y_pred) / len(y_true)
 
 X, y = datasets.make_blobs(n_samples=150,n_features=2,centers=2,cluster_std=1.05,random_state=2)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123)
